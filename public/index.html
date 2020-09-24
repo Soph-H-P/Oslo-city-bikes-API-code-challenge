@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <link rel="text" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <link rel="gbfs" type="application/json" href="https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json" />
+    <script src="leaflet-tilelayer-colorfilter.min.js"></script>
+    <title>Bike</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Find a bike</h1>
+    </header>
+
+    <main>
+        <div id="app">
+            <div id="stations_map"><!-- RENDER MAP--></div>
+            <div class="side_bar">
+                <div class="search_button ">
+                        <button type="button" class="button" id="park"><i class="material-icons w3-jumbo">local_parking</i></button>    
+                </div>
+                <button type="button" class="button dark_mode" id="dark_mode"><i class="material-icons w3-jumbo">nights_stay</i></button>
+                <button type="button" class="button help" id="dark_mode"><i class="material-icons w3-jumbo">help_outline</i></button>
+                
+            </div>             
+                <div class="help_container hidden">
+                    <p>Click the <i class="material-icons w3-small" id="small">local_parking</i>/  <i class="material-icons w3-small" id="small">pedal_bike</i>  to see parking/bike availability</p>
+                    <hr class="key_divider">
+                    <p>Click the <i class="material-icons w3-small" id="small">nights_stay</i>/  <i class="material-icons w3-small" id="small">wb_sunny</i>  change between dark and light mode</p>
+                    <hr class="key_divider">
+                    <figure>
+                        <img class="key_icon" src="../free_bikes.png" alt="free bikes icon">
+                        <figcaption>Available</figcaption>
+                    </figure>
+                    <hr class="key_divider">
+                    <figure>
+                            <img class="key_icon" src="../no_free_bikes.png" alt="no free bikes icon">
+                            <figcaption>Unavailable</figcaption>
+                        </figure>
+
+                </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="./script.js"></script>
+

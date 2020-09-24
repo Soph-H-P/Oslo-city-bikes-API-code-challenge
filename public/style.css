@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(48, 71, 85, 1);
+    color: rgb(48, 71, 85, 1);
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    z-index: -5;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+  
+    width: 100%;
+    color:rgb(48, 164, 207); 
+    letter-spacing: 0.2em;
+    width: 25%; /* Set the width of the sidebar */
+    position: fixed; 
+    padding: 1em;
+    z-index: 1; 
+    bottom: 0; 
+    left: 0;
+}
+
+.search_button {
+    background-color: rgb(255, 255, 255, 0);
+    outline: none;
+}
+
+
+
+.button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.dark_mode, .help, #bike, #park {
+    background-color: rgb(255, 255, 255, 0);
+    color: rgb(48, 71, 85, 1);
+    border: none;
+    padding: 1em;
+    outline: none;
+    
+}
+
+.help_container {
+    /* visibility: hidden;*/
+    width: 20%; 
+    max-width: 150px;
+    position: fixed; 
+    z-index: 1; 
+    bottom: 0; 
+    right: 0;
+    background-color: rgba(131, 200, 236, 0.7);
+    overflow-x: hidden;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.help_container.hidden {
+    visibility: hidden;
+}
+
+.help_container.visible {
+    visibility: visible;
+}
+
+hr.key_divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.key_icon {
+    height: 40px;
+}
+
+.dark_mode.on {
+    color: rgb(238, 235, 171, 1);
+}
+
+.material-icons {
+    font-size: 2.5em;
+}
+
+
+.popup {
+    text-align: center;
+    line-height: 2;
+    align-content: center;
+}
+
+
+
+
+.side_bar {
+        width: 10%; 
+        max-width: 60px;
+        position: fixed; 
+        z-index: 1; 
+        top: 0; 
+        right: 0;
+        background-color: rgba(131, 200, 236, 0.5);
+        overflow-x: hidden;
+        padding: 20px;
+        text-align: center;
+        border-radius: 1em;
+}
+
+#small {
+    font-size: 1.3em;
+}
+
+
+
+#popup_title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: black;
+}
+
+#address {
+
+    color: grey;
+}
+
+#stations_map {
+    z-index: -3;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+}
+
