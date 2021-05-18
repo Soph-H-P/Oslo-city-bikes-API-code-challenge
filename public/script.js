@@ -134,21 +134,21 @@ darkModeButton.addEventListener("click", () => {
     darkModeButton.classList.add("on");
     darkMode = true;
     darkModeButton.innerHTML = '<i class="material-icons w3-large">wb_sunny</i>';
-    let darkTileLayer = L.tileLayer.colorFilter("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png", {
-      attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
-      filter: myFilter,
-    });
-    darkTileLayer.addTo(stationMap);
+    L.tileLayer
+      .colorFilter("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png", {
+        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
+        filter: myFilter,
+      })
+      .addTo(stationMap);
   } else {
     darkModeButton.classList.remove("on");
     darkMode = false;
     darkModeButton.innerHTML = '<i class="material-icons w3-large">nights_stay</i>';
-    let lightTileLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png", {
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: "abcd",
       maxZoom: 19,
-    });
-    lightTileLayer.addTo(stationMap);
+    }).addTo(stationMap);
   }
 });
 
