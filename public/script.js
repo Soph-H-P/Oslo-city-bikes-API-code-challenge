@@ -25,7 +25,7 @@ stationMap.on("locationfound", onLocationFound);
 stationMap.locate({ setView: true, watch: false, maxZoom: 17 });
 
 //ACCESSING STATION LOCATIONS- longitude and latitude, name and address
-const stationInfoUrl = "http://gbfs.urbansharing.com/oslobysykkel.no/station_information.json";
+const stationInfoUrl = "https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json";
 
 async function getStationInfo() {
   const res = await fetch(stationInfoUrl);
@@ -41,7 +41,7 @@ async function getStationInfo() {
 const stationInfo = getStationInfo();
 
 //ACCESSING STATION STATUS - available bikes and spaces
-const stationStatusUrl = "http://gbfs.urbansharing.com/oslobysykkel.no/station_status.json";
+const stationStatusUrl = "https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json";
 
 async function getBikeInfo() {
   const res = await fetch(stationStatusUrl);
